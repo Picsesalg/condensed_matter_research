@@ -1,0 +1,10 @@
+#!/bin/bash -l
+#SBATCH --job-name=alice_test
+#SBATCH --time=6:00:0
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --partition=scavenger
+#SBATCH --qos=scavenger
+#SBATCH --mail-type=end
+#SBATCH --mail-user=ayang36@jhu.edu
+time mpiexec ./a.out > outalice.txt
