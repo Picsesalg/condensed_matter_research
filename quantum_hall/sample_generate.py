@@ -46,4 +46,18 @@ for m in range(2001):
                 break
         engy_init_1 = 0
         engy_init_2 = 0
-        for 
+        for a in range(L):
+            for b in range(L):
+                if x1[a][b] == 1:
+                    for c in range(a, L):
+                        for d in range(L):
+                            if ((c == a and d > b) or c > a):
+                                if (x1[c][d] == 1 and a != c and b != d):
+                                    distance = (c - a)**2 + (d - b)**2
+                                    distance = math.sqrt(distance)
+                                    engy_init_1 = engy_init_1 - math.log(distance)
+                    engy_init_2 = engy_init_2 + a**2 + b**2
+        engy_init_1 = engy_init_1 / 2
+        engy_init_1 = charge**2 * engy_init_1
+        engy_init_2 = (charge / 4) * engy_init_2
+        engy_init = engy_init_1 + engy_init_2
