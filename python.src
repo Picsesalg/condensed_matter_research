@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#SBATCH --job-name=debug
+#SBATCH --time=6:00:0
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --partition=lrgmem
+#SBATCH --mem=10G
+#SBATCH --mail-type=end
+#SBATCH --mail-user=ayang36@jhu.edu
+#SBATCH --requeue
+module load tensorflow/r1.0
+mpirun -np 1 python < tester.py > out_alice.txt

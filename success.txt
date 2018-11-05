@@ -1,0 +1,133 @@
+Epoch = 1, Accuracy =   1.000000
+Slowdown # = 0, Cost =  0.438920731
+Epoch = 2, Accuracy =   1.000000
+Slowdown # = 0, Cost =  0.086108049
+Epoch = 3, Accuracy =   1.000000
+Slowdown # = 0, Cost =  0.067729932
+Epoch = 4, Accuracy =   1.000000
+Slowdown # = 0, Cost =  0.061371133
+Epoch = 5, Accuracy =   1.000000
+Slowdown # = 0, Cost =  0.056474073
+Epoch = 6, Accuracy =   1.000000
+Slowdown # = 1, Cost =  0.052336726
+Epoch = 7, Accuracy =   1.000000
+Slowdown # = 1, Cost =  0.048867167
+Epoch = 8, Accuracy =   1.000000
+Slowdown # = 1, Cost =  0.045997684
+Epoch = 9, Accuracy =   1.000000
+Slowdown # = 1, Cost =  0.043629895
+Epoch = 10, Accuracy =   1.000000
+Slowdown # = 1, Cost =  0.041724873
+Epoch = 11, Accuracy =   1.000000
+Slowdown # = 2, Cost =  0.040146137
+Epoch = 12, Accuracy =   1.000000
+Slowdown # = 2, Cost =  0.038878170
+Epoch = 13, Accuracy =   1.000000
+Slowdown # = 2, Cost =  0.037801894
+Epoch = 14, Accuracy =   1.000000
+Slowdown # = 2, Cost =  0.036871280
+Epoch = 15, Accuracy =   1.000000
+Slowdown # = 2, Cost =  0.036072570
+Training complete.
+Calculating phase diagram.
+T/J = 3.5, Ordering Probability =  0.002750000
+T/J = 3.475, Ordering Probability =  0.000000000
+T/J = 3.45, Ordering Probability =  0.000000000
+T/J = 3.425, Ordering Probability =  0.000000000
+T/J = 3.4, Ordering Probability =  0.000000000
+T/J = 3.375, Ordering Probability =  0.000000000
+T/J = 3.35, Ordering Probability =  0.000000000
+T/J = 3.325, Ordering Probability =  0.000000000
+T/J = 3.3, Ordering Probability =  0.000000000
+T/J = 3.275, Ordering Probability =  0.000000000
+T/J = 3.25, Ordering Probability =  0.000000000
+T/J = 3.225, Ordering Probability =  0.000000000
+T/J = 3.2, Ordering Probability =  0.000000000
+T/J = 3.175, Ordering Probability =  0.000000000
+T/J = 3.15, Ordering Probability =  0.000000000
+T/J = 3.125, Ordering Probability =  0.000000000
+T/J = 3.1, Ordering Probability =  0.000000000
+T/J = 3.075, Ordering Probability =  0.000000000
+T/J = 3.05, Ordering Probability =  0.000000000
+T/J = 3.025, Ordering Probability =  0.000000000
+T/J = 3.0, Ordering Probability =  0.000250000
+T/J = 2.975, Ordering Probability =  0.000000000
+T/J = 2.95, Ordering Probability =  0.000000000
+T/J = 2.925, Ordering Probability =  0.000000000
+T/J = 2.9, Ordering Probability =  0.000250000
+T/J = 2.875, Ordering Probability =  0.000000000
+T/J = 2.85, Ordering Probability =  0.000500000
+T/J = 2.825, Ordering Probability =  0.000750000
+T/J = 2.8, Ordering Probability =  0.010250000
+T/J = 2.775, Ordering Probability =  0.003000000
+T/J = 2.75, Ordering Probability =  0.001000000
+T/J = 2.725, Ordering Probability =  0.006000000
+T/J = 2.7, Ordering Probability =  0.010750000
+T/J = 2.675, Ordering Probability =  0.025750000
+T/J = 2.65, Ordering Probability =  0.011500000
+T/J = 2.625, Ordering Probability =  0.043249998
+T/J = 2.6, Ordering Probability =  0.021749999
+T/J = 2.575, Ordering Probability =  0.006000000
+T/J = 2.55, Ordering Probability =  0.021250000
+T/J = 2.525, Ordering Probability =  0.194250003
+T/J = 2.5, Ordering Probability =  0.236000001
+T/J = 2.475, Ordering Probability =  0.145999998
+T/J = 2.45, Ordering Probability =  0.334250003
+T/J = 2.425, Ordering Probability =  0.145750001
+T/J = 2.4, Ordering Probability =  0.238250002
+T/J = 2.375, Ordering Probability =  0.261750013
+T/J = 2.35, Ordering Probability =  0.319000006
+T/J = 2.325, Ordering Probability =  0.333499998
+T/J = 2.3, Ordering Probability =  0.971249998
+T/J = 2.275, Ordering Probability =  0.990000010
+T/J = 2.25, Ordering Probability =  0.625999987
+T/J = 2.225, Ordering Probability =  0.970000029
+T/J = 2.2, Ordering Probability =  0.997500002
+T/J = 2.175, Ordering Probability =  1.000000000
+T/J = 2.15, Ordering Probability =  0.992500007
+T/J = 2.125, Ordering Probability =  1.000000000
+T/J = 2.1, Ordering Probability =  1.000000000
+T/J = 2.075, Ordering Probability =  1.000000000
+T/J = 2.05, Ordering Probability =  1.000000000
+T/J = 2.025, Ordering Probability =  1.000000000
+T/J = 2.0, Ordering Probability =  1.000000000
+T/J = 1.975, Ordering Probability =  1.000000000
+T/J = 1.95, Ordering Probability =  1.000000000
+T/J = 1.925, Ordering Probability =  1.000000000
+T/J = 1.9, Ordering Probability =  1.000000000
+T/J = 1.875, Ordering Probability =  1.000000000
+T/J = 1.85, Ordering Probability =  1.000000000
+T/J = 1.825, Ordering Probability =  1.000000000
+T/J = 1.8, Ordering Probability =  1.000000000
+T/J = 1.775, Ordering Probability =  1.000000000
+T/J = 1.75, Ordering Probability =  1.000000000
+T/J = 1.725, Ordering Probability =  1.000000000
+T/J = 1.7, Ordering Probability =  1.000000000
+T/J = 1.675, Ordering Probability =  1.000000000
+T/J = 1.65, Ordering Probability =  1.000000000
+T/J = 1.625, Ordering Probability =  1.000000000
+T/J = 1.6, Ordering Probability =  1.000000000
+T/J = 1.575, Ordering Probability =  1.000000000
+T/J = 1.55, Ordering Probability =  1.000000000
+T/J = 1.525, Ordering Probability =  1.000000000
+T/J = 1.5, Ordering Probability =  1.000000000
+T/J = 1.475, Ordering Probability =  1.000000000
+T/J = 1.45, Ordering Probability =  1.000000000
+T/J = 1.425, Ordering Probability =  1.000000000
+T/J = 1.4, Ordering Probability =  1.000000000
+T/J = 1.375, Ordering Probability =  1.000000000
+T/J = 1.35, Ordering Probability =  1.000000000
+T/J = 1.325, Ordering Probability =  1.000000000
+T/J = 1.3, Ordering Probability =  1.000000000
+T/J = 1.275, Ordering Probability =  1.000000000
+T/J = 1.25, Ordering Probability =  1.000000000
+T/J = 1.225, Ordering Probability =  1.000000000
+T/J = 1.2, Ordering Probability =  1.000000000
+T/J = 1.175, Ordering Probability =  1.000000000
+T/J = 1.15, Ordering Probability =  1.000000000
+T/J = 1.125, Ordering Probability =  1.000000000
+T/J = 1.1, Ordering Probability =  1.000000000
+T/J = 1.075, Ordering Probability =  1.000000000
+T/J = 1.05, Ordering Probability =  1.000000000
+T/J = 1.025, Ordering Probability =  1.000000000
+T/J = 1.0, Ordering Probability =  1.000000000
