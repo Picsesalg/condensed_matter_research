@@ -31,9 +31,19 @@ x1 = np.zeros((L, L))
 cp = 0
 
 while (cp < np):
-    i = random.randint(0, 1)
-    j = random.randint(0, 1)
+    i = random.randint(0, L - 1)
+    j = random.randint(0, L - 1)
     if (x1[i][j] == 0):
         x1[i][j] = 1
         cp = cp + 1
 
+for m in range(2001):
+    for n in range(itval):
+        while True:
+            i = random.randint(0, L - 1)
+            j = random.randint(0, L - 1)
+            if (x1[i][j] == 1):
+                break
+        engy_init_1 = 0
+        engy_init_2 = 0
+        for 
