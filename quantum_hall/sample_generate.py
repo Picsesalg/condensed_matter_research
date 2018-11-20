@@ -112,7 +112,7 @@ for m in range(2001):
         if (engy_fina > engy_init):
             x1[i][j] = 1
             x1[s][t] = 0
-        elif (random.uniform(0, 1) > math.exp(-(2 / charge) * engy_fina)):
+        elif (random.random() > np.exp(-2 * engy_fina / charge)):
             x1[i][j] = 1
             x1[s][t] = 0
 
