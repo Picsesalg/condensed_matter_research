@@ -4,6 +4,39 @@ import random
 import datetime
 import math
 
+def initLattice(ra, L, numParts):
+    cp = 0
+    while (cp < numParts):
+        i = random.randint(0, L - 1)
+        j = random.randint(0, L - 1)
+        while (ra[i, j] == 1):
+            i = random.randint(0, L - 1)
+            j = random.randint(0, L - 1)
+        ra[i, j] = 1
+        cp += 1
+    return ra
+
+def chooseRandCoord(ra, i, j):
+    if (x1[i + charge, j] == 0):
+        s = i + charge
+           t = j
+    elif (x1[i - charge, j] == 0):
+        s = i - charge
+        t = j
+    elif (x1[i, j + charge] == 0):
+        s = i
+        t = j + charge
+    elif (x1[i, j - charge] == 0):
+        s = i
+        t = j - charge
+    else:
+        while (x1[i, j] != 1):
+            i = random.randint(0, L - 1)
+            j = random.randint(0, L - 1)
+        s = i
+        t = j
+    return s, t
+
 """
 Initialising random variables.
 """
@@ -20,101 +53,35 @@ L = 31
 #Number of inputs.
 ni = L * L
 #Number of particles
-nump = ni / 2
-itval = int(nump / 2)
+numParts = ni / 2
+itval = int(numParts / 2)
 charge = 3
 
 #Initalise all elements to 0
 x1 = np.zeros((L, L))
 
-cp = 0
+countParts = 0
 engy_fina_1 = 0
 engy_fina_2 = 0
 
-while (cp < nump):
-    i = random.randint(0, L - 1)
-    j = random.randint(0, L - 1)
-    if (x1[i][j] == 0):
-        x1[i][j] = 1
-        cp = cp + 1
+#Initialise the lattice
+x1 = initLattice(x1, L, numParts)
 
-for m in range(2001):
-    for n in range(itval):
-        while True:
+#Monte Carlo sampling of 100 steps to converge into the phases.
+for m in range (2001):
+    for k in range (itval):
+#Calculate initial energy
+
+#Choose random particle to move
+        i = random.randint(0, L - 1)
+        j = random.randint(0, L - 1)
+        while (x1[i, j] != 1):
             i = random.randint(0, L - 1)
             j = random.randint(0, L - 1)
-            if (x1[i][j] == 1):
-                break
-        engy_init_1 = 0
-        engy_init_2 = 0
-        for a in range(L):
-            for b in range(L):
-                if x1[a][b] == 1:
-                    for c in range(a, L):
-                        for d in range(L):
-                            if ((c == a and d > b) or c > a):
-                                if (x1[c][d] == 1 and a != c and b != d):
-                                    distance = (c - a)**2 + (d - b)**2
-                                    distance = math.sqrt(distance)
-                                    engy_init_1 = engy_init_1 - math.log(distance)
-                    engy_init_2 = engy_init_2 + a**2 + b**2
-        engy_init_1 = engy_init_1 / 2
-        engy_init_1 = charge**2 * engy_init_1
-        engy_init_2 = (charge / 4) * engy_init_2
-        engy_init = engy_init_1 + engy_init_2
+        x1[i, j] = 0
+        s, t = chooseRandCoord(x1, i, j)
+        x1[s, t] = 1
 
-        choice = 0
-        s = i
-        t = j
-        while True:
-            choice = choice + 1
-            s = i
-            t = j
-            if (choice == 1):
-                s = i + charge
-                if (s >= L):
-                    s = s - L
-            elif (choice == 2):
-                s = i - charge
-                if (s < 0):
-                    s = s + L
-            elif (choice == 3):
-                t = j + charge
-                if (t >= L):
-                    t = t - L
-            elif (choice == 4):
-                t = t - charge
-                if (t < 0):
-                    t = t + L
-            else:
-                s = random.randint(0, L - 1)
-                t = random.randint(0, L - 1)
-            if (x1[s][t] != 1):
-                break
-        #Calculating new energy configuration
-        x1[i][j] = 0
-        x1[s][t] = 1
-        for a in range(L):  
-            for b in range(L):
-                if (x1[a][b] == 1):
-                    for c in range(a, L):
-                        for d in range(L):
-                            if ((c == a and d > b) or c > a):
-                                if (x1[c][d] == 1 and a != c and b != d):
-                                    distance = (c - a)**2 + (d - b)**2
-                                    distance = math.sqrt(distance)
-                                    engy_fina_1 = engy_fina_1 - math.log(distance)
-                    engy_fina_2 = engy_fina_2 + a**2 + b**2
-        engy_fina_1 = charge**2 * engy_fina_1
-        engy_fina_2 = (charge / 4) * engy_fina_2
-        engy_fina = engy_fina_1 + engy_fina_2
-        #Accept flip if energy is lowered. Else, keep OG
-        if (engy_fina > engy_init):
-            x1[i][j] = 1
-            x1[s][t] = 0
-        elif (random.random() > np.exp(-2 * engy_fina / charge)):
-            x1[i][j] = 1
-            x1[s][t] = 0
 
 row = np.array([])
 col = np.array([])
