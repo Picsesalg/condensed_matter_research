@@ -73,8 +73,9 @@ def initEnergy(ra, L):
     return term1, term2
 
 """
-Initialising random variables.
+Main function
 """
+# Initialising random variables.
 now = datetime.datetime.now()
 seed = now.hour * 3600 + now.minute * 60 + now.second
 random.seed(seed)
@@ -99,6 +100,8 @@ countParts = 0
 engy_init = 0
 engy_init_1 = 0
 engy_init_2 = 0
+engy_fina_1 = 0
+engy_fina_2 = 0
 engy_fina = 0
 
 # Initialise the lattice
@@ -122,7 +125,22 @@ for m in range (2001):
         x1[i][j] = 0
         x1[s][t] = 1
 # Calculate new energy
-
+        engy_fina1_1, engy_fina_2 = initEnergy(x1, L)
+        engy_fina_1 = engy_fina_1 * (charge ** 2)
+        engy_fina_2 = (charge / 4.0) * engy_fina_2
+        engy_fina = engy_fina_1 + engy_fina_2
+# Decide whether to accept new config
+# Keep the flip if new engy is lowered
+        if (engy_fina >= engy_init):
+            x1[i][j] = 1
+            x1[s][t] = 0
+        else:
+# Move with probability by Boltzmann weight 
+            boltzmann = -(2 / charge) * engy_fina
+            boltzmann = math.exp(boltzmann)
+            if (random.random() > boltzmann):
+                x1[i][j] = 1
+                x1[s][t] = 0
 
 
 row = np.array([])
@@ -131,7 +149,6 @@ col = np.array([])
 for y in range(L):
     for x in range(L):
         if (x1[x][y] == 1):
-            count += 1
             row = np.append(row, x)
             col = np.append(col, y)
 
