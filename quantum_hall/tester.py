@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import math
+import random
 
 """
 def initEnergy(ra, L):
@@ -26,7 +27,7 @@ x1 = np.array([[0, 1, 0, 1],
                 [0, 0, 1, 1]])
 initEnergy(x1, 4)
 """
-
+"""
 def initEnergy(ra, L):
     pivot = L // 2
     offsetA = 0
@@ -62,7 +63,7 @@ x1 = np.array([[0, 1, 0, 1],
                 [1, 1, 0, 0],
                 [0, 0, 1, 1]])
 initEnergy(x1, 4)
-
+"""
 """
 print(3 // 2)
 """
@@ -72,3 +73,8 @@ x = 4
 x = 4 // 3
 print(x)
 """
+random.seed(200)
+for i in range(12):
+    for j in range(3):
+        x = random.randint(0, 30)
+        print(x)
