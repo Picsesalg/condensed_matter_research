@@ -81,7 +81,7 @@ L = 31
 # Number of inputs.
 ni = L * L
 # Number of particles
-numParts = 150
+numParts = ni / 2
 itval = int(numParts / 2)
 charge = 3
 
@@ -108,10 +108,11 @@ for y in range(L):
             row = np.append(row, x)
             col = np.append(col, y)
 
-warm_up = 6001
+plt.scatter(row, col)
+plt.show()
 
 # Monte Carlo sampling of 100 steps to converge into the phases.
-for m in range (warm_up):
+for m in range (2000):
     for k in range (1):
 # Choose random particle to move
         i = random.randint(0, 30)
@@ -157,4 +158,4 @@ for y in range(L):
             col = np.append(col, y)
 
 plt.scatter(row, col)
-plt.savefig("./150_particles/{}.png".format(warm_up))
+plt.show()
